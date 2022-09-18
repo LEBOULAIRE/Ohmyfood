@@ -1,0 +1,146 @@
+/* Photos et carte menu */
+.container{ display: flex; flex-direction: column; 
+    &__img--mod {width: 100%;
+                 height: 350px;   
+                 object-fit: cover;
+                 z-index: 1;
+                 
+                 
+                }
+    &__menu {border-radius: 30px 30px 0 0; 
+             width: 80%; 
+             background: $color-back;
+             padding: 15px 20px 0 20px;
+             margin-left: auto;
+             margin-right: auto; 
+             margin-top: -50px;
+             z-index: 2;
+            }
+ }
+ @media screen and (max-width: 768px) {.container__menu {width: auto; margin-left: 0; margin-right: 0}                      }
+
+ .bloc { 
+    &__title { @include element-space-between;
+                   margin-bottom: 20px;
+        &--title {@include family-Shrikhand;   }
+        &--icone {position: relative; 
+                  font-size: 30px; 
+                  
+                &--regular {position: absolute; 
+                            top: -20px; 
+                            left: -50px;
+                                                
+                    &:hover {opacity: 0;}
+                            }  
+                    
+                &--solid {position: absolute; 
+                          opacity: 0; 
+                          top: -20px; 
+                          left: -50px;
+                          background: -webkit-linear-gradient(#9356DC, #FF79DA);
+                          background-clip: text;
+                          -webkit-background-clip: text;
+                          -webkit-text-fill-color: transparent;
+                          opacity: 0;
+                          transition:  all 500ms ease-in-out;
+                          
+                    &:hover {opacity: 1;}
+                        
+                        }
+                        }
+                        }
+                        }
+
+/* carte menu */
+   /* carte menu principale */ 
+       
+        .bloc__menu {@include element-space-between-notalign;  
+                     padding-bottom: 50px;}
+                     
+                     @media screen and (max-width: 1200px){ .bloc__menu {flex-direction: column;}}
+
+        .title--menu{ font-size: $size-title-hall-dish-dessert;
+                     margin-bottom: 20px;
+                &::after { content: "";
+                           display: block;
+                           width: 50px;
+                           height: 3px;
+                           background: $color-tertiary ;
+                           margin-top: 5px;
+                }       
+                
+                }
+
+                                           
+        .bloc__hall, .bloc__dish, .bloc__dessert { width: 30%; }
+        
+        @media screen and (max-width: 1200px){ .bloc__hall, .bloc__dish, .bloc__dessert {width: 100%;  }
+                                               .bloc__dish, .bloc__dessert {margin-top: 50px;}
+                                                        }
+        
+
+        .bloc__hall__carte, .bloc__dish__carte, .bloc__dessert__carte {   background: $color-white;
+                                                                          box-shadow: 3px 3px 6px $color-back-relief;
+                                                                          border-radius: 10px; 
+                                                                          height: 70px; } 
+   
+        
+        .food { @include element-centered-justify; width: 100%;
+                padding-left: 5px; 
+                margin-top: 15px;
+                position: relative;
+                animation: opacity 2s both;
+            &__title--mod {font-size: 17px; @include no-line-break;}
+            &__more {@include element-space-between; 
+                    font-size: 15px; 
+                    margin-top: -30px;  }
+            &__complement { @include no-line-break; }
+            &--price {font-weight: bold;
+                      margin-right: 30px; 
+                      
+                         }
+               }
+
+        .delivery {@include angle-bouton-primary;
+                   @include element-centered;
+                   width: 160px;
+                   margin: 0 auto 30px auto;
+                   transition: all 250ms ease-in-out;
+                &:hover {  
+                         opacity : 0.8;
+                         box-shadow: 8px 8px 6px #A9A9A9 ;
+                }
+                   
+        }
+
+.check {display: none; 
+        right: 0;
+        position: absolute;
+        width: 4em;   
+        background: $color-tertiary;  
+        height: 100%;
+        border-radius: 0 10px 10px 0;
+        
+        &--icone {font-size: 20px;
+                  color: $color-white;
+                  animation: rotate 700ms;
+                }
+}
+
+.food:hover .check   {@include element-centered;
+        animation : slide 500ms ease-in-out;
+        transform-origin: right;}
+
+.food:hover .food--price { animation: slideprice 500ms both;  }
+.food:hover .food__title--mod { animation: slideprice 500ms both;  }
+
+.anim-1 {animation-delay: 0.1s;}
+.anim-2 {animation-delay: 0.2s;}
+.anim-3 {animation-delay: 0.3s;}
+.anim-4 {animation-delay: 0.4s;}
+.anim-5 {animation-delay: 0.5s;}
+.anim-6 {animation-delay: 0.6s;}
+.anim-7 {animation-delay: 0.7s;}
+.anim-8 {animation-delay: 0.8s;}
+.anim-9 {animation-delay: 0.9s;}
+.anim-10 {animation-delay: 1s;}

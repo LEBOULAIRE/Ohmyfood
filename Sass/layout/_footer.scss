@@ -1,0 +1,25 @@
+.footer { @include element-centerde-align;
+    background: $color-footer;
+    color: $color-white; 
+    
+  &__list {list-style-type: none;} 
+          a {color: $color-white;
+           margin-bottom: 10px;     
+          &:hover{text-decoration: underline;}                            
+          
+          }      
+          
+  }
+.menu-footer { 
+  &__logo--mod {font-family: "Shrikhand";
+                margin-bottom: 20px;
+                font-size: 20px;   
+                                        }        
+
+       }
+.logo__footer {margin-right: 10px;
+    &--partner {margin-right: 5px;}
+}
+
+
+.icone {display: none; display: flex; align-items: center; justify-content: center;}

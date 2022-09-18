@@ -1,0 +1,42 @@
+/* Animation du bouton check */
+@keyframes slide {
+    from{transform:scaleX(0)};
+    to{transform: scaleX(1);}
+
+}
+
+@keyframes slideprice {
+    from{margin-right: 0;}
+    to{margin-right: 5em;}
+
+}
+
+
+@keyframes rotate {
+    from{transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}
+/* Animation du menu */
+@keyframes opacity {
+    from {opacity: 0;}
+    to {opacity: 1;}
+
+}
+
+/* Animation du loader */
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes time {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0);
+    }
+  }
