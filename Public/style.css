@@ -120,7 +120,6 @@ body .img {
 }
 
 /* Navigation */
-/* loader */
 .loading {
   display: flex;
   justify-content: center;
@@ -457,6 +456,12 @@ body .img {
   width: 30%;
 }
 
+@media screen and (max-width: 1200px) {
+  .bloc__hall, .bloc__dish, .bloc__dessert {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
 .bloc__hall__carte, .bloc__dish__carte, .bloc__dessert__carte {
   background: white;
   box-shadow: 3px 3px 6px #d9d9d9;
