@@ -25,12 +25,13 @@
         &--title {@include family-Shrikhand;   }
         &--icone {position: relative; 
                   font-size: 30px; 
-                  
+                &:hover { > .bloc__title--icone--regular {opacity: 0;}  
+                          > .bloc__title--icone--solid {opacity: 1;}
+        }
                 &--regular {position: absolute; 
                             top: -20px; 
                             left: -50px;
-                                                
-                    &:hover {opacity: 0;}
+                            transition:  all 500ms ease-in-out;                   
                             }  
                     
                 &--solid {position: absolute; 
@@ -44,7 +45,6 @@
                           opacity: 0;
                           transition:  all 500ms ease-in-out;
                           
-                    &:hover {opacity: 1;}
                         
                         }
                         }
@@ -74,10 +74,7 @@
                                            
         .bloc__hall, .bloc__dish, .bloc__dessert { width: 30%; }
         
-        @media screen and (max-width: 1200px){ .bloc__hall, .bloc__dish, .bloc__dessert {width: 100%;  }
-                                               .bloc__dish, .bloc__dessert {margin-top: 50px;}
-                                                        }
-        
+
 
         .bloc__hall__carte, .bloc__dish__carte, .bloc__dessert__carte {   background: $color-white;
                                                                           box-shadow: 3px 3px 6px $color-back-relief;

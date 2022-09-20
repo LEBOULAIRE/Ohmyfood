@@ -320,13 +320,15 @@ body .img {
 .carte__icone {
   position: relative;
 }
+.carte__icone:hover > .carte__icone--mod {
+  opacity: 0;
+}
+.carte__icone:hover > .carte__icone--mod--solid {
+  opacity: 1;
+}
 .carte__icone--mod {
   font-size: 30px;
-  opacity: 1;
   transition: opacity 500ms ease-in-out;
-}
-.carte__icone--mod:hover {
-  opacity: 0;
 }
 .carte__icone--mod--solid {
   font-size: 30px;
@@ -338,9 +340,6 @@ body .img {
   -webkit-text-fill-color: transparent;
   opacity: 0;
   transition: all 500ms ease-in-out;
-}
-.carte__icone--mod--solid:hover {
-  opacity: 1;
 }
 
 @media screen and (max-width: 992px) {
@@ -403,13 +402,17 @@ body .img {
   position: relative;
   font-size: 30px;
 }
+.bloc__title--icone:hover > .bloc__title--icone--regular {
+  opacity: 0;
+}
+.bloc__title--icone:hover > .bloc__title--icone--solid {
+  opacity: 1;
+}
 .bloc__title--icone--regular {
   position: absolute;
   top: -20px;
   left: -50px;
-}
-.bloc__title--icone--regular:hover {
-  opacity: 0;
+  transition: all 500ms ease-in-out;
 }
 .bloc__title--icone--solid {
   position: absolute;
@@ -422,9 +425,6 @@ body .img {
   -webkit-text-fill-color: transparent;
   opacity: 0;
   transition: all 500ms ease-in-out;
-}
-.bloc__title--icone--solid:hover {
-  opacity: 1;
 }
 
 /* carte menu */
@@ -457,14 +457,6 @@ body .img {
   width: 30%;
 }
 
-@media screen and (max-width: 1200px) {
-  .bloc__hall, .bloc__dish, .bloc__dessert {
-    width: 100%;
-  }
-  .bloc__dish, .bloc__dessert {
-    margin-top: 50px;
-  }
-}
 .bloc__hall__carte, .bloc__dish__carte, .bloc__dessert__carte {
   background: white;
   box-shadow: 3px 3px 6px #d9d9d9;
