@@ -1,22 +1,28 @@
-.nav { position: relative;
-    &__img { height: 70px;
-             @include element-centered;
-                 
-            }      
-            &--img {width: 200px;}
+.nav {
+  position: relative;
+  &__img {
+    height: 70px;
+    @include element-centered;
+  }
+  &--img {
+    width: 200px;
+  }
 
-    &__localisation {@include element-centered;
-                     @include text_gras;
-                     height: 60px;
-                     background-color: #F2F2F2;
-                     box-shadow:   inset 0 3px 6px #D9D9D9;
-                     font-size: 18px; 
-         i {margin-right: 20px; margin-bottom: 5px; }
-            }
-    &__arrow {font-size: 25px;
-              position: absolute;
-              left: 40px;
-    
-            }
-  
-          }
+  &__localisation {
+    @include element-centered;
+    @include text_gras;
+    height: 60px;
+    background-color: #f2f2f2;
+    box-shadow: inset 0 3px 6px #d9d9d9;
+    font-size: 18px;
+    i {
+      margin-right: 20px;
+      margin-bottom: 5px;
+    }
+  }
+  &__arrow {
+    font-size: 25px;
+    position: absolute;
+    left: 40px;
+  }
+}

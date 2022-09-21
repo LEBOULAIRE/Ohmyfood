@@ -1,18 +1,19 @@
 .loading {
   @include element-centered;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   opacity: 0.9;
   height: 100vh;
   width: 100vw;
   position: fixed;
   z-index: 1;
-  animation: time 200ms forwards ;
-  animation-delay: 3s;}
+  animation: time 200ms forwards;
+  animation-delay: 3s;
+}
 
-  .loader {
+.loader {
   border-top: 5px solid $color-primary;
-  border-left: 5px solid $color-secondary ;
-  border-bottom: 5px solid $color-tertiary ;
+  border-left: 5px solid $color-secondary;
+  border-bottom: 5px solid $color-tertiary;
   border-right: 5px solid $color-white;
   width: 150px;
   height: 150px;
@@ -20,165 +21,206 @@
   margin: auto;
   position: absolute;
   animation: spin 1s ease-in-out infinite forwards;
-    &--text {font-size: 25px; font-weight: bold; color: #03224c;
-    }
+  &--text {
+    font-size: 25px;
+    font-weight: bold;
+    color: #03224c;
   }
-
-
-
+}
 
 /* Header */
 
-.header { @include element-centered-column;
-    background: linear-gradient(to top, #F2F2F2, white);
-&__menu { @include element-centered;
-    &--mod {text-align: center;
-            font-size: $size-h1;
-            margin-top: 30px;}        
-          }
-&__text { @include element-centered;
-    &--mod{text-align: center;
-           margin-top: 10px; }          
-
+.header {
+  @include element-centered-column;
+  background: linear-gradient(to top, #f2f2f2, white);
+  &__menu {
+    @include element-centered;
+    &--mod {
+      text-align: center;
+      font-size: $size-h1;
+      margin-top: 30px;
+    }
+  }
+  &__text {
+    @include element-centered;
+    &--mod {
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
 }
+
+.header__search {
+  @include element-centered;
+  &--mod {
+    @include angle-bouton-primary;
+    width: 250px;
+    margin-bottom: 30px;
+    transition: all 250ms ease-in-out;
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.8;
+      box-shadow: 8px 8px 6px #a9a9a9;
+    }
+  }
 }
-
-.header__search {@include element-centered;
-    &--mod {@include angle-bouton-primary;
-            width: 250px;
-            margin-bottom: 30px;
-            transition: all 250ms ease-in-out;
-            opacity: 1;
-
-               &:hover { opacity : 0.8;
-                         box-shadow: 8px 8px 6px #A9A9A9 ;
-
-              }
-              }
-              }
-
 
 /* Bouton main */
-.main {padding: 30px 0 50px 0;
-&__menu{text-align: center;
-       margin-bottom: 20px; }
-&__btn {display: flex; 
-       justify-content: space-around;
-       
-      }
-    }
-    
-
-.btn { display: flex; 
- align-items: center;  
- width: 25%; 
- height: 65px;
- background: $color-back;
- border-radius: 20px;
- box-shadow: 3px 3px 9px $color-back-relief;
- transition: background 250ms ease-in-out; 
-      &:hover{background: $back-color-btn-lien ;
-              transition: background 250ms ease-in-out; 
-        > .btn__logo--mod {color: $color-primary;}    
-        }
-&__num--mod { @include element-centered;
-      height: 25px; 
-      width: 25px; 
-      background-color: #9356DC;
-      color: $color-white;
-      border-radius: 50%; 
-      position: relative;
-      margin: 0 15px 0 -12px;
-     
-       }
-
-&__logo--mod {color: $color-icone ;
-              margin-right: 20px; 
-          
-            }          
-
-    
+.main {
+  padding: 30px 0 50px 0;
+  &__menu {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__btn {
+    display: flex;
+    justify-content: space-around;
+  }
 }
-@media screen and (max-width: 992px){ .main__btn {flex-direction: column; 
-                                            align-items: center; }
-                                .btn {width: 90%;
-                                       margin-bottom: 30px;}
-} 
+
+.btn {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  height: 65px;
+  background: $color-back;
+  border-radius: 20px;
+  box-shadow: 3px 3px 9px $color-back-relief;
+  transition: background 250ms ease-in-out;
+  &:hover {
+    background: $back-color-btn-lien;
+    transition: background 250ms ease-in-out;
+    > .btn__logo--mod {
+      color: $color-primary;
+    }
+  }
+  &__num--mod {
+    @include element-centered;
+    height: 25px;
+    width: 25px;
+    background-color: #9356dc;
+    color: $color-white;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 15px 0 -12px;
+  }
+
+  &__logo--mod {
+    color: $color-icone;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .main__btn {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+}
 
 /* Restaurants */
 
-.section-Restaurant { background: $color-back; display: flex; flex-direction: column;
-  &__menu--mod {text-align: center; padding: 50px 0px 20px 0px; }
-  
-}
-
-
-.container-carte{ @include element-space-around; margin-bottom: 30px;
-
-  &__compagny {  @include element-flex-column;
-                 background: $color-white; 
-                 width: 40%; 
-                 border-radius: 20px 20PX 20px 20px;
-                 box-shadow: 3px 3px 9px $color-back-relief;
-                 transition: all 300ms ease-out;
-                 
-        &:hover { box-shadow: 3px 3px 9px $color-back-relief-lien ;      
-                  
-            > .img, p, h3 {opacity: 0.8; } } 
-            }        
-
-  }     
-
-
-.carte {position: relative;
-  
-
-  &__new {position: absolute;
-               @include element-centered;
-               background: $color-tertiary;
-               width: 100px; 
-               height: 30px;
-               top: 15px;
-               right: 25px;
-                  }
-  &__restaurant { @include element-space-between;
-                  padding: 0 15px 0px 15px;                           }
-      
-
-         
-                  
-                  }
-.carte-localisation__spot {margin-top: -15px;}
-.carte__icone {position: relative;
-    &:hover {
-      >.carte__icone--mod {opacity: 0;}
-      >.carte__icone--mod--solid {opacity: 1;}
-     }
-
-  &--mod {font-size: 30px;
-          transition: opacity 500ms ease-in-out;
-                                   
+.section-Restaurant {
+  background: $color-back;
+  display: flex;
+  flex-direction: column;
+  &__menu--mod {
+    text-align: center;
+    padding: 50px 0px 20px 0px;
   }
-  &--mod--solid {font-size: 30px;
-          position: absolute;
-          right: 0;
-          background: -webkit-linear-gradient(#9356DC, #FF79DA);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          opacity: 0;
-          transition:  all 500ms ease-in-out;
-          
-     
-  }  
- 
-
 }
 
+.container-carte {
+  @include element-space-around;
+  margin-bottom: 30px;
 
-@media screen and (max-width: 992px)
-{.section-Restaurant { padding: 0 30px 0 30px;
-  &__menu--mod { text-align: left; margin-bottom: 0;  }}
-.container-carte{ flex-direction: column; align-items: center; margin-bottom: 0;
-  &__compagny {width: 100%; margin-bottom:20px; } }
+  &__compagny {
+    @include element-flex-column;
+    background: $color-white;
+    width: 40%;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 3px 3px 9px $color-back-relief;
+    transition: all 300ms ease-out;
+
+    &:hover {
+      box-shadow: 3px 3px 9px $color-back-relief-lien;
+
+      > .img,
+      p,
+      h3 {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.carte {
+  position: relative;
+
+  &__new {
+    position: absolute;
+    @include element-centered;
+    background: $color-tertiary;
+    width: 100px;
+    height: 30px;
+    top: 15px;
+    right: 25px;
+  }
+  &__restaurant {
+    @include element-space-between;
+    padding: 0 15px 0px 15px;
+  }
+}
+.carte-localisation__spot {
+  margin-top: -15px;
+}
+.carte__icone {
+  position: relative;
+  &:hover {
+    > .carte__icone--mod {
+      opacity: 0;
+    }
+    > .carte__icone--mod--solid {
+      opacity: 1;
+    }
+  }
+
+  &--mod {
+    font-size: 30px;
+    transition: opacity 500ms ease-in-out;
+  }
+  &--mod--solid {
+    font-size: 30px;
+    position: absolute;
+    right: 0;
+    background: -webkit-linear-gradient(#9356dc, #ff79da);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .section-Restaurant {
+    padding: 0 30px 0 30px;
+    &__menu--mod {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+  .container-carte {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    &__compagny {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
 }

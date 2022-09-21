@@ -1,28 +1,66 @@
 /* Display flex */
 
-@mixin element-centered-column {display: flex; justify-content: center; align-items: center; flex-direction: column;}
-@mixin element-centered {display: flex; justify-content: center; align-items: center;}
-@mixin element-centered-justify {display: flex; flex-direction: column; justify-content: center;}
-@mixin element-space-around {display: flex; justify-content: space-around;}
-@mixin element-space-between {display: flex; justify-content: space-between; align-items: center;}
-@mixin element-space-between-notalign {display: flex; justify-content: space-between; }
-@mixin element-flex-column {display: flex; flex-direction: column;}
-@mixin element-centerde-align {display: flex; align-items: center;}
+@mixin element-centered-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@mixin element-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin element-centered-justify {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@mixin element-space-around {
+  display: flex;
+  justify-content: space-around;
+}
+@mixin element-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin element-space-between-notalign {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin element-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin element-centerde-align {
+  display: flex;
+  align-items: center;
+}
 /* Protiété sur texte */
 
-@mixin text_gras {font-weight: bold;}
-@mixin family-Shrikhand { font-family: "Shrikhand", arial, sans-serif;}
-@mixin no-line-break {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+@mixin text_gras {
+  font-weight: bold;
+}
+@mixin family-Shrikhand {
+  font-family: "Shrikhand", arial, sans-serif;
+}
+@mixin no-line-break {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 /* Protiété visuel */
 
-                
-@mixin degraded-color {background: linear-gradient( to top, #9356DC, #FF79DA );}
-@mixin angle-bouton-primary {border-radius: 30px; 
-                             background: linear-gradient( to top, #9356DC, #FF79DA ) ;
-                             height: 45px;
-                             font-weight: bold;
-                             box-shadow: 6px 6px 6px #C1C1C1;
-                             color: $color-white; 
-                        
-                        } 
+@mixin degraded-color {
+  background: linear-gradient(to top, #9356dc, #ff79da);
+}
+@mixin angle-bouton-primary {
+  border-radius: 30px;
+  background: linear-gradient(to top, #9356dc, #ff79da);
+  height: 45px;
+  font-weight: bold;
+  box-shadow: 6px 6px 6px #c1c1c1;
+  color: $color-white;
+}
